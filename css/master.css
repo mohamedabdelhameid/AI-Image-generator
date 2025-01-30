@@ -1,0 +1,151 @@
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #000;
+}
+  .loader:before,
+  .loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+  }
+  .loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+    top: -50%;
+    position: relative;
+  }
+
+  .bodyDark .loader{
+    color: #fff;
+  }
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}
+.animationn{
+  display: inline-block;
+  /* position: relative; */
+}
+.h3navbar{
+  display: inline-block;
+}
+
+body {
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.bodyDark {
+  background-color: #000000d8;
+  color: #f6f6f6;
+}
+.mode {
+  position: relative;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.651);
+  transition: 0.3s;
+  margin: 0 8px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+.mode:hover {
+  color: #000;
+}
+
+@media (max-width : 371px) {
+  .h3navbar{
+    font-size: 20px;
+  }
+  .imgIcon{
+    width: 30px !important;
+  }
+}
+/* body to design */
+.allBody{
+  min-height: 88vh;
+}
+.allBodysec1{
+  min-height: 85vh;
+}
+.inptNum1{
+  width: 95% !important;
+  /* height: 300px; */
+}
+.inptNum2{
+  width: 100px !important;
+}
+.inptNum3{
+  width: 100px !important;
+}
+/* .imgBox{
+  display: flex;
+  height: fit-content;
+} */
+.imgBox input{
+  display: none;
+}
+.imgBox label{
+  border: 2px #000000d8 dotted;
+  font-size: 25px;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.bodyDark .imgBox label{
+  border-color: #f6f6f6;
+}
+.imgBox label:hover{
+  transform: scale(1.08);
+}
