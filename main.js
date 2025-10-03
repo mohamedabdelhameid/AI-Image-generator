@@ -92,7 +92,7 @@ Gene.addEventListener("click", function () {
 
 
 download.onclick = function() {
-  let img = document.getElementById("IMAge"); // الحصول على الصورة المعروضة
+  let img = document.getElementById("IMAge");
   if (!img) {
       alert("لا توجد صورة للتحميل!");
       return;
@@ -103,5 +103,5 @@ download.onclick = function() {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-  // downloadImage(img.src, "downloaded-image.jpg");
 };
+
